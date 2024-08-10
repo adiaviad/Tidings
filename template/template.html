@@ -5,10 +5,25 @@
     .content{
         color:red;
     }
+    .logo{
+        width:100px;
+        height:100px;
+    }
+    .right{
+        float: right;
+    }
+    .left{
+        float: left;
+    }
+
 </style>
 
 </head>
 <body>
+    <div style="height:100px">
+        <div class="right"><img class="logo" src="../logo.png"></div>
+        <div class="left"><img class="logo" src="../logo.png"></div>
+    </div>
     <div class="content" id="content">{{content}}</div>
     <footer>{{footer}}</footer>
 </body>

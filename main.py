@@ -23,9 +23,12 @@ def generate_HTML_and_PDF_output(htmlSoup, outputPath, outputName):
 
     print(f"Processed HTML saved to {html_out}")
 
+    options = {
+        'enable-local-file-access': True  # Needed to load local CSS/JS files in some environments
+    }
     config = pdfkit.configuration(wkhtmltopdf="wkhtmltopdf\\bin\wkhtmltopdf.exe")
     # Generate PDF from the modified HTML
-    pdfkit.from_file(html_out, pdf_out, configuration=config)
+    pdfkit.from_file(html_out, pdf_out, configuration=config,options=options)
     print(f"PDF generated and saved to {pdf_out}")
 
 
