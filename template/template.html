@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>{{title}}</title>
     <style>
     .content{
@@ -9,21 +10,27 @@
         width:100px;
         height:100px;
     }
-    .right{
-        float: right;
-    }
-    .left{
-        float: left;
-    }
+
 
 </style>
 
 </head>
 <body>
-    <div style="height:100px">
-        <div class="right"><img class="logo" src="../logo.png"></div>
-        <div class="left"><img class="logo" src="../logo.png"></div>
+
+    <div >
+        <div >
+            <img class="logo" src="../Tidings.jpg" alt="tidings">
+        </div>
+        <div >
+            <img class="logo" src="../logo.png" alt="logo">
+        </div>
+        <div >
+            <p> {{DateHebrewYear}} {{DateHebrewMonth}} {{DateHebrewDay}} </p>
+            <p>  {{DateGregorianMonth}}  {{DateGregorianYear}}  {{DateGregorianDay}}</p>
+        </div>
+
     </div>
+
     <div class="content" id="content">{{content}}</div>
     <footer>{{footer}}</footer>
 </body>
