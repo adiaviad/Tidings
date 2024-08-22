@@ -1,5 +1,5 @@
 import json
-import pdf
+import html_pdf
 import argparse
 
 if __name__ == "__main__":
@@ -16,5 +16,5 @@ if __name__ == "__main__":
     with open(html_file, 'r') as f:
         html = f.read()
 
-    updatedHTML = pdf.replace_placeholders_with_parameters(jsonParameters, html)
-    pdf.generate_HTML_and_PDF_output(updatedHTML, outputPath, outputName)
+    updatedHTML = html_pdf.replace_placeholders_with_parameters(jsonParameters, html)
+    html_pdf.generate_HTML_and_PDF_output(updatedHTML, outputPath, outputName)
